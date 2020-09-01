@@ -1,0 +1,6 @@
+#projectsNav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 120px;
+}
+
