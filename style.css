@@ -26,6 +26,7 @@ body {
   --weather: #ff9800;
   --todo: #1f2933;
   --tea: #131313;
+  --currentColor: var(--breddit);
   --fontColor: #ececec;
 }
 
@@ -82,7 +83,8 @@ header {
   top: 0;
   overflow-x: auto;
   font-family: 'Varela Round', sans-serif;
-  background: var(--breddit);
+  background: var(--currentColor);
+  transition: 0.5s;
 }
 
 #projectsNav ul {
@@ -110,15 +112,17 @@ header {
   height: 40px;
   border: none;
   border-radius: 25px;
-  box-shadow: 0 0 5px #00000040;
-  background-color: var(--breddit);
+  box-shadow: inset 0 0 0 transparent, 0 0 5px #00000040;
+  background-color: var(--currentColor);
   color: var(--fontColor);
   text-decoration: none;
+  transition: 0.3s;
 }
 
 #projectsNav ul li a.selected {
-  box-shadow: inset 0 0 5px #0000003d;
+  box-shadow: inset 0 0 5px #0000003d, 0 0 0 transparent;
 }
+
 
 .projectSection {
   padding: 80px 10px;
