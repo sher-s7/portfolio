@@ -8,7 +8,10 @@
     <title>Sher Sheikh - Portfolio</title>
   </head>
   <body>
-    <header>
+    <a class="hidden" href="#header" id="scrollToTop"
+      ><img src="assets/up-arrow.png" alt="up-arrow.png"
+    /></a>
+    <header id="header">
       <div class="headerSection" id="nameTitle">
         <h1 id="fullname">sher sheikh</h1>
         <h3 id="title">web developer</h3>
@@ -28,32 +31,45 @@
         </ul>
       </div>
       <div class="headerSection" id="technologies">
-        <span
+        <span class="desktop"
           >HTML - CSS - JavaScript - React - Git - Webpack - Firebase -
           npm</span
         >
+        <div class="mobile">
+          <div>HTML - CSS - JavaScript - React</div>
+          <div>Git - Webpack - Firebase - npm</div>
       </div>
     </header>
 
     <div id="projectsNav">
       <ul>
-        <li><a href="#project-reddit" class="selected" id="redditClone">REDDIT CLONE</a></li>
-        <li><a href="#project-weather" id="weatherCheck">WEATHER CHECK</a></li>
+        <li>
+          <a href="#project-reddit" class="selected" id="redditClone"
+            >REDDIT CLONE</a
+          >
+        </li>
+        <li>
+          <a href="#project-weather" id="weatherCheck">WEATHER CHECK</a>
+        </li>
         <li><a href="#project-todolist" id="todoList">TO-DO LIST</a></li>
         <li><a href="#project-teatime" id="teaTime">TEA TIME</a></li>
       </ul>
     </div>
 
     <section class="projectSection" id="project-reddit">
+      <h2>Breddit - A Reddit Clone</h2>
       <img class="projectPreview" src="assets/breddit.png" alt="breddit.png" />
     </section>
     <section class="projectSection" id="project-weather">
+      <h2>WeatherCheck</h2>
       <img class="projectPreview" src="assets/weather.png" alt="weather.png" />
     </section>
     <section class="projectSection" id="project-todolist">
+      <h2>To-do List</h2>
       <img class="projectPreview" src="assets/todo.png" alt="todo.png" />
     </section>
     <section class="projectSection" id="project-teatime">
+      <h2>Tea Time</h2>
       <img class="projectPreview" src="assets/teatime.png" alt="teatime.png" />
     </section>
 

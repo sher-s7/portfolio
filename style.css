@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url(patternBG.css);
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
@@ -23,23 +24,49 @@ h6 {
 
 body {
   --breddit: #9c805b;
-  --weather: #ff9800;
+  --weather: #ef6c00;
   --todo: #1f2933;
   --tea: #131313;
-  --currentColor: var(--breddit);
-  --fontColor: #ececec;
+  --fontColor: #d9dee6;
+  --bg: #2a323f;
+  --bg2: #3a4453;
+  --bg3: #282f3b;
+  --currentColor: var(--bg);
+  transition: 0.3s;
+  position: relative;
+  overflow: auto;
+  background-color: var(--bg);
+  background-attachment: fixed;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.desktop {
+  display: none;
+}
+
+#scrollToTop {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  transition: 0.3s;
 }
 
 header {
-  background: linear-gradient(white -200%, var(--breddit));
+  background: transparent;
   font-family: "Roboto Slab", serif;
   padding: 10px;
   color: var(--fontColor);
-  display: flex;
-  flex-direction: column;
-}
-
-#nameTitle {
+  display: grid;
+  grid-template-columns: auto auto;
 }
 
 #fullname {
@@ -50,31 +77,44 @@ header {
   font-weight: 400;
 }
 
-#navLinks {
-}
 #navLinks ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: center;
-  margin-top: 20px;
+  text-align: right;
 }
 #navLinks ul li {
   margin-bottom: 10px;
-  display: inline-block;
 }
 #navLinks ul li > * {
-  background: transparent;
+  display: inline-block;
+  background: var(--bg2);
+  padding: 5px 10px;
   color: var(--fontColor);
   text-decoration: none;
   border: none;
-  font-family: 'Roboto Mono', monospace;
+  border-radius: 5px;
+  font-family: "Roboto Mono", monospace;
 }
 
-
 #technologies {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   margin-top: 20px;
+  text-align: center;
+  opacity: 0.7;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#technologies .mobile {
+
+}
+
+#technologies .mobile div {
+  line-height: 30px;
 }
 
 #projectsNav {
@@ -82,8 +122,8 @@ header {
   position: sticky;
   top: 0;
   overflow-x: auto;
-  font-family: 'Varela Round', sans-serif;
-  background: var(--currentColor);
+  font-family: "Varela Round", sans-serif;
+  background: transparent;
   transition: 0.5s;
 }
 
@@ -111,37 +151,34 @@ header {
   padding: 10px 15px;
   height: 40px;
   border: none;
-  border-radius: 25px;
-  box-shadow: inset 0 0 0 transparent, 0 0 5px #00000040;
-  background-color: var(--currentColor);
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 transparent, 0 0 5px rgba(0, 0, 0, 0.534);
+  background-color: var(--bg);
   color: var(--fontColor);
   text-decoration: none;
   transition: 0.3s;
 }
 
 #projectsNav ul li a.selected {
-  box-shadow: inset 0 0 5px #0000003d, 0 0 0 transparent;
+  background-color: var(--bg3);
+  box-shadow: inset 0 0 5px #00000077, 0 0 0 transparent;
 }
-
 
 .projectSection {
   padding: 80px 10px;
+  text-align: center;
 }
 
 #project-reddit {
-  background-color: var(--breddit);
 }
 
 #project-weather {
-  background-color: var(--weather);
 }
 
 #project-todolist {
-  background-color: var(--todo);
 }
 
 #project-teatime {
-  background-color: var(--tea);
 }
 .projectPreview {
   width: 100%;
@@ -153,4 +190,56 @@ header {
 
 footer {
   background-color: var(--tea);
+}
+
+@media (max-width: 319px) {
+  #technologies {
+    display: none;
+  }
+}
+
+@media (min-width: 650px) {
+  header {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  #technologies {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: 40px 0 20px 0;
+  }
+
+  #navLinks ul {
+    flex-direction: row;
+  }
+  #navLinks ul li {
+    padding: 0px 10px;
+    border: none;
+  }
+  #navLinks ul li > * {
+    background-color: transparent;
+    cursor: pointer;
+  }
+  #navLinks ul li > *:hover {
+    text-decoration: underline;
+  }
+  .mobile {
+    display: none !important;
+  }
+  .desktop {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .projectSection {
+    padding: 80px 10px;
+    height: 100vh;
+    text-align: left;
+  }
+  .projectPreview {
+    height: 100%;
+    width: auto;
+    max-width: none;
+  }
 }

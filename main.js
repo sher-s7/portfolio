@@ -1,9 +1,21 @@
 const anchors = document.querySelectorAll('a[href^="#"]');
 const nav = document.getElementById("projectsNav");
+const scrollUpBtn = document.getElementById('scrollToTop');
 
 const onScroll = function () {
   const scrollHeight = document.getElementById("project-reddit").scrollHeight;
-  if (window.scrollY >= 0 && window.scrollY < scrollHeight) {
+  if(window.scrollY > 235) {
+    scrollUpBtn.classList.remove('hidden')
+  } else {
+    scrollUpBtn.classList.add('hidden')
+  }
+  if(window.scrollY < 220) {
+    document.body.style.setProperty(
+      "--currentColor",
+      getComputedStyle(document.body).getPropertyValue("--bg")
+    );
+  }
+  if (window.scrollY >= 220 && window.scrollY < scrollHeight) {
     document.querySelector(".selected").classList.remove("selected");
     document.getElementById("redditClone").classList.add("selected");
     document.body.style.setProperty(
