@@ -57,6 +57,7 @@ body {
   bottom: 20px;
   right: 20px;
   transition: 0.3s;
+  z-index: 10;
 }
 
 #scrollToTop img {
@@ -127,6 +128,7 @@ header {
   font-family: "Varela Round", sans-serif;
   background: transparent;
   transition: 0.5s;
+  z-index: 100;
 }
 
 #projectsNav ul {
@@ -170,17 +172,6 @@ header {
   padding: 80px 10px;
   text-align: center;
   text-decoration: solid;
-}
-
-.projectSection h2 {
-  color: var(--fontColor);
-  font-family: "Roboto Slab";
-  font-weight: 400;
-  margin-bottom: 10px;
-  display: inline-block;
-  padding: 5px 10px;
-  width: 100%;
-  border-bottom: 1px solid #d9dee660;
 }
 
 #project-reddit p {
@@ -251,10 +242,18 @@ footer {
     padding: 80px 10px;
     height: 100vh;
     text-align: left;
+    perspective: 800px;
   }
   .projectPreview {
     height: 100%;
     width: auto;
     max-width: none;
+    margin-left: 50px;
+    transition: 0.3s;
+  }
+
+  .projectPreview:hover {
+    transform: rotateY(5deg) translate(0px, -10px);
+    box-shadow: -5px 5px 20px #00000028;
   }
 }
