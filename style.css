@@ -56,8 +56,11 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 40px;
   transition: 0.3s;
+}
+
+#scrollToTop img {
+  width: 40px;
 }
 
 header {
@@ -110,7 +113,6 @@ header {
 }
 
 #technologies .mobile {
-
 }
 
 #technologies .mobile div {
@@ -136,12 +138,12 @@ header {
 
 #projectsNav ul li {
   padding: 0;
-  margin-left: 20px;
+  margin-left: 10px;
   display: inline-block;
 }
 
 #projectsNav ul li:last-child {
-  border-right: 20px solid transparent;
+  border-right: 10px solid transparent;
 }
 
 #projectsNav ul li a {
@@ -167,9 +169,22 @@ header {
 .projectSection {
   padding: 80px 10px;
   text-align: center;
+  text-decoration: solid;
 }
 
-#project-reddit {
+.projectSection h2 {
+  color: var(--fontColor);
+  font-family: "Roboto Slab";
+  font-weight: 400;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 5px 10px;
+  width: 100%;
+  border-bottom: 1px solid #d9dee660;
+}
+
+#project-reddit p {
+  background-color: #00000030;
 }
 
 #project-weather {
@@ -181,7 +196,7 @@ header {
 #project-teatime {
 }
 .projectPreview {
-  width: 100%;
+  width: 80%;
   max-width: 400px;
   border-radius: 15px;
   margin: 0 auto;
