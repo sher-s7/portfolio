@@ -1,8 +1,9 @@
 @import url(patternBG.css);
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -169,13 +170,101 @@ header {
 }
 
 .projectSection {
-  padding: 80px 10px;
-  text-align: center;
+  padding: 80px 30px;
   text-decoration: solid;
+  color: var(--fontColor);
+  font-size: 18px;
+  font-family: "Open Sans";
+  font-weight: 300;
 }
 
-#project-reddit p {
-  background-color: #00000030;
+.projectPreview {
+  width: 100%;
+  display: block;
+  max-width: 400px;
+  border-radius: 15px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px #00000028;
+}
+
+.createdWith {
+  font-size: 14px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.createdWith li {
+  background-color: var(--bg2);
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.projectLinks {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.projectLinks a {
+  color: var(--fontColor);
+  text-decoration: none;
+  background-color: transparent;
+  border: 3px solid var(--bg2);
+  padding: 5px 10px;
+  border-radius: 2px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+.projectLinks a:active,
+.projectLinks a:hover {
+  background-color: var(--bg2);
+}
+
+.description {
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.infoContainer b {
+  /* font-weight: lighter; */
+}
+
+b.react {
+  color: #61dafb;
+}
+
+b.firebase {
+  color: #ffca28;
+}
+
+b.openWeather a {
+  color: #e96e50;
+}
+
+b.geolocation a {
+  color: #97c0f7;
+}
+
+b.datefns a{
+  color: #e163a4;
+}
+
+b.npm a {
+  color: #e94e4e;
+}
+
+b.aftereffects {
+  color: #ccbaff;
+}
+
+#project-reddit {
 }
 
 #project-weather {
@@ -186,21 +275,76 @@ header {
 
 #project-teatime {
 }
-.projectPreview {
-  width: 80%;
-  max-width: 400px;
-  border-radius: 15px;
+
+#aboutMe {
   margin: 0 auto;
-  box-shadow: 0px 0px 10px #00000028;
+  width: 90%;
+  padding: 80px 5px;
+  border-top: 2px solid var(--bg2);
+  color: var(--fontColor);
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 300;
+}
+
+#aboutMe h2 {
+  background-color: var(--bg2);
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+
+#aboutMe a,
+#aboutMe b {
+  color: #f13f3f;
+}
+
+#aboutMe p {
+  background-color: rgba(0, 0, 0, 0.096);
+  padding: 10px;
+  border-radius: 5px;
 }
 
 footer {
   background-color: var(--tea);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+footer img {
+  width: 40px;
+  margin-left: 20px;
+}
+
+footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--fontColor);
+  text-decoration: none;
+  font-family: "Roboto Mono";
 }
 
 @media (max-width: 319px) {
   #technologies {
     display: none;
+  }
+  .projectLinks {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projectLinks a {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 370px) {
+  .projectLinks a {
+    font-size: 17px;
   }
 }
 
