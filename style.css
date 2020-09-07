@@ -46,6 +46,10 @@ body {
   background-color: var(--bg2);
 }
 
+h2::selection, h2::-moz-selection {
+  background-color: var(--bg);
+}
+
 .hidden {
   visibility: hidden;
   opacity: 0;
@@ -208,7 +212,9 @@ header {
   margin: 5px;
   border-radius: 5px;
   display: inline-block;
+  cursor: default;
 }
+
 
 .projectLinks {
   margin-top: 30px;
@@ -519,13 +525,17 @@ footer a {
   .createdWith {
     grid-column-start: 2;
     grid-row-start: 2;
-    max-width: 640px;
+    max-width: 520px;
     padding: 10px;
     display: block;
     font-size: 16px;
     text-align: center;
     justify-self: center;
     margin: 0 auto;
+  }
+
+  .createdWith li:hover {
+    background-color: #333c49;
   }
 
   .projectLinks {
@@ -544,6 +554,18 @@ footer a {
   }
 
   #aboutMe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #aboutMe p {
     max-width: 640px;
+    margin: 0;
+  }
+
+  #aboutMe h2 {
+    width: max-content;
+    margin-bottom: 20px;
   }
 }
