@@ -70,13 +70,6 @@ function onScroll() {
 
 window.addEventListener("scroll", onScroll);
 
-anchors.forEach((anchor) => {
-  anchor.addEventListener("click", (e) => {
-    document.querySelector(".selected").classList.remove("selected");
-    anchor.classList.add("selected");
-  });
-});
-
 document.getElementById('copyBtn').addEventListener('click', () => {
   const copyText = document.getElementById('email');
   const copySuccess = document.getElementById('copySuccess');
