@@ -76,3 +76,16 @@ anchors.forEach((anchor) => {
     anchor.classList.add("selected");
   });
 });
+
+document.getElementById('copyBtn').addEventListener('click', () => {
+  const copyText = document.getElementById('email');
+  const copySuccess = document.getElementById('copySuccess');
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+
+  document.execCommand('copy');
+  copySuccess.classList.remove('hidden')
+  setTimeout(() => {
+    copySuccess.classList.add('hidden')
+  }, 2000);
+})
