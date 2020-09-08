@@ -40,6 +40,11 @@ body {
   background-attachment: fixed;
 }
 
+#root {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 ::selection,
 ::-moz-selection {
   background-color: var(--bg2);
