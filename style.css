@@ -61,9 +61,6 @@ h2::-moz-selection {
   transition: 0.3s;
 }
 
-.desktop {
-  display: none;
-}
 
 #scrollToTop {
   text-decoration: none;
@@ -83,8 +80,9 @@ header {
   font-family: "Roboto Slab", serif;
   padding: 10px;
   color: var(--fontColor);
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
 }
 
 #fullname {
@@ -94,106 +92,45 @@ header {
 #title {
   font-weight: 400;
 }
-
+#nameTitle {
+  margin-bottom: 20px;
+}
 #navLinks ul {
   display: flex;
-  flex-direction: column;
-  justify-content: end;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
   padding: 0;
   margin: 0;
   text-align: right;
 }
 #navLinks ul li {
-  margin-bottom: 10px;
+  margin: 5px;
 }
 #navLinks ul li > * {
   display: inline-block;
-  background: var(--bg2);
   padding: 5px 10px;
   color: var(--fontColor);
   text-decoration: none;
   border: none;
-  border-radius: 5px;
   font-family: "Roboto Mono", monospace;
-}
-
-#technologies {
-  font-family: "Roboto Mono", monospace;
-  margin-top: 20px;
-  text-align: center;
-  opacity: 0.7;
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-#technologies .mobile {
-}
-
-#technologies .mobile div {
-  line-height: 30px;
-}
-
-#projectsNav {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  overflow-x: auto;
-  font-family: "Varela Round", sans-serif;
-  background: transparent;
-  transition: 0.5s;
-  z-index: 100;
-}
-
-#projectsNav ul {
-  padding: 10px 0;
-  width: max-content;
-  margin: 5px auto;
-  list-style: none;
-}
-
-#projectsNav ul li {
-  padding: 0;
-  margin-left: 10px;
-  display: inline-block;
-}
-
-#projectsNav ul li:last-child {
-  border-right: 10px solid transparent;
-}
-
-#projectsNav ul li a {
-  display: inline-block;
-  width: 100%;
-  white-space: nowrap;
-  padding: 10px 15px;
-  height: 40px;
-  border: none;
-  border-radius: 5px;
-  box-shadow: inset 0 0 0 transparent, 0 0 5px rgba(0, 0, 0, 0.534);
-  background-color: var(--bg);
-  color: var(--fontColor);
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-#projectsNav ul li a.selected {
-  background-color: var(--bg3);
-  box-shadow: inset 0 0 5px #00000077, 0 0 0 transparent;
 }
 
 .projectSection {
-  padding: 80px 30px;
+  padding: 10px;
   text-decoration: solid;
   color: var(--fontColor);
   font-size: 18px;
   font-family: "Open Sans";
   font-weight: 300;
+  padding-top: 30px;
+  margin-bottom: 30px;
 }
 
 .prevContainer {
   width: max-content;
-  max-width: 100%;
+  max-width: 80%;
   display: block;
   margin: 0 auto;
 }
@@ -201,7 +138,7 @@ header {
 .projectPreview {
   width: 100%;
   display: block;
-  max-width: 400px;
+  max-width: 360px;
   border-radius: 15px;
   box-shadow: 0px 0px 10px #00000028;
 }
@@ -251,10 +188,8 @@ header {
 .description {
   margin: 0 auto;
   margin-top: 20px;
-}
-
-.infoContainer b {
-  /* font-weight: lighter; */
+  padding: 10px;
+  text-align: justify;
 }
 
 b.react {
@@ -302,7 +237,7 @@ b.aftereffects {
 #resume {
   margin: 0 auto;
   width: 90%;
-  padding: 80px 5px;
+  padding: 40px 5px;
   border-top: 2px solid var(--bg2);
   color: var(--fontColor);
   font-family: "Open Sans";
@@ -356,20 +291,15 @@ b.aftereffects {
   margin-right: 5px;
 }
 
-#emailContainer {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 #email {
   background-color: transparent;
   border: none;
   margin: 0;
   color: var(--fontColor);
   font-size: 16px;
+  width: 100%;
+  text-align: center;
+  height: 100%;
 }
 
 #email:focus {
@@ -427,7 +357,7 @@ b.aftereffects {
 
 #resumeLinks a {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -464,9 +394,6 @@ footer a {
 }
 
 @media (max-width: 319px) {
-  #technologies {
-    display: none;
-  }
   .projectLinks {
     display: flex;
     flex-direction: column;
@@ -495,37 +422,6 @@ footer a {
 }
 
 @media (min-width: 650px) {
-  header {
-    display: grid;
-    grid-template-columns: auto auto;
-  }
-  #technologies {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    margin: 40px 0 20px 0;
-  }
-
-  #navLinks ul {
-    flex-direction: row;
-  }
-  #navLinks ul li {
-    padding: 0px 10px;
-    border: none;
-  }
-  #navLinks ul li > * {
-    background-color: transparent;
-    cursor: pointer;
-  }
-  #navLinks ul li > *:hover {
-    text-decoration: underline;
-  }
-  .mobile {
-    display: none !important;
-  }
-  .desktop {
-    display: block;
-  }
-
   #resumeLinks {
     flex-direction: row;
   }
@@ -537,14 +433,40 @@ footer a {
 }
 
 @media (min-width: 768px) and (min-height: 500px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #navLinks ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: flex-end;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+  }
+
+  #navLinks ul li {
+    padding: 0px 10px;
+    border: none;
+  }
+  #navLinks ul li > * {
+    background-color: transparent;
+    cursor: pointer;
+  }
+  #navLinks ul li > *:hover {
+    text-decoration: underline;
+  }
   .projectSection {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto;
-    padding: 80px 10px;
-    height: 100vh;
+    padding: 10px;
     text-align: left;
     align-items: center;
+    font-size: 22px;
   }
 
   .prevContainer {
@@ -557,10 +479,6 @@ footer a {
   }
 
   .projectPreview {
-    height: 80vh;
-    max-height: 640px;
-    width: auto;
-    max-width: none;
     transition: 0.3s;
     cursor: pointer;
   }
@@ -586,7 +504,7 @@ footer a {
     max-width: 520px;
     padding: 10px;
     display: block;
-    font-size: 16px;
+    font-size: 17px;
     text-align: center;
     justify-self: center;
     margin: 0 auto;
