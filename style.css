@@ -23,8 +23,6 @@ h6 {
   margin: 0;
 }
 
-
-
 body {
   --breddit: #9c805b;
   --weather: #ef6c00;
@@ -42,11 +40,13 @@ body {
   background-attachment: fixed;
 }
 
-::selection, ::-moz-selection {
+::selection,
+::-moz-selection {
   background-color: var(--bg2);
 }
 
-h2::selection, h2::-moz-selection {
+h2::selection,
+h2::-moz-selection {
   background-color: var(--bg);
 }
 
@@ -213,13 +213,13 @@ header {
   cursor: default;
 }
 
-
 .projectLinks {
   margin-top: 30px;
   text-align: center;
 }
 
-.projectLinks a {
+.projectLinks a,
+#resume a {
   color: var(--fontColor);
   text-decoration: none;
   background-color: var(--bg2);
@@ -232,7 +232,8 @@ header {
   transition: 0.2s;
 }
 
-.projectLinks a:hover {
+.projectLinks a:hover,
+#resume a:hover {
   background-color: var(--bg2);
 }
 
@@ -286,7 +287,8 @@ b.aftereffects {
 }
 
 #aboutMe,
-#contactMe {
+#contactMe,
+#resume {
   margin: 0 auto;
   width: 90%;
   padding: 80px 5px;
@@ -297,8 +299,7 @@ b.aftereffects {
   font-weight: 300;
 }
 
-#aboutMe h2,
-#contactMe h2 {
+#aboutMe h2 {
   background-color: var(--bg2);
   display: inline-block;
   padding: 5px 10px;
@@ -314,7 +315,6 @@ b.aftereffects {
   padding: 10px;
 }
 
-
 #contactMe a {
   color: var(--fontColor);
   display: flex;
@@ -329,10 +329,11 @@ b.aftereffects {
   border-radius: 5px;
 }
 
-#contactMe {
- display: flex;
- flex-direction: column;
- align-items: center;
+#contactMe,
+#resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #contactMe h2 {
@@ -403,6 +404,31 @@ b.aftereffects {
   transform: scale(0.9);
 }
 
+#resume h2 {
+  margin-bottom: 20px;
+}
+
+#resumeLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#resumeLinks a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#resumeLinks a img {
+  height: 20px;
+  margin-left: 5px;
+}
+
+#resumeLinks a:first-of-type {
+  margin-bottom: 10px;
+}
+
 footer {
   background-color: var(--tea);
   padding: 20px;
@@ -437,6 +463,17 @@ footer a {
 
   .projectLinks a {
     margin-bottom: 5px;
+  }
+
+  #contactMe a {
+    flex-direction: column;
+  }
+  #linkedin,
+  #emailContainer,
+  #emailLink,
+  #copyBtn {
+    width: 100% !important;
+    height: auto !important;
   }
 }
 
@@ -477,6 +514,15 @@ footer a {
   .desktop {
     display: block;
   }
+
+  #resumeLinks {
+    flex-direction: row;
+  }
+
+  #resumeLinks a:first-of-type {
+    margin-bottom: 0;
+    margin-right: 5px;
+  }
 }
 
 @media (min-width: 768px) and (min-height: 500px) {
@@ -506,7 +552,6 @@ footer a {
     transition: 0.3s;
     cursor: pointer;
   }
-
 
   .projectPreview:hover {
     transform: translateY(-5px);
@@ -549,7 +594,8 @@ footer a {
     align-self: flex-start;
   }
 
-  .projectLinks a {
+  .projectLinks a,
+  #resume a {
     background-color: transparent;
     margin-right: 5px;
   }
