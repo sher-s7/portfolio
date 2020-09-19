@@ -61,7 +61,6 @@ h2::-moz-selection {
   transition: 0.3s;
 }
 
-
 #scrollToTop {
   text-decoration: none;
   position: fixed;
@@ -90,6 +89,7 @@ header {
 
 #title {
   font-weight: 400;
+  font-size: 19px;
 }
 #nameTitle {
   margin-bottom: 20px;
@@ -245,15 +245,15 @@ b.aftereffects {
 }
 
 #aboutMe h2 {
-  background-color: var(--bg2);
-  display: inline-block;
+  width: max-content;
+  display: block;
+  margin: 0 auto;
   padding: 5px 10px;
   border-radius: 2px;
 }
 
-#aboutMe a,
-#aboutMe b {
-  color: #f13f3f;
+#aboutMe a{
+  color: var(--fontColor);
 }
 
 #aboutMe p {
@@ -325,6 +325,8 @@ b.aftereffects {
   height: 40px;
   width: 280px;
   margin: 0 auto;
+  color: var(--fontColor);
+  border: none;
 }
 
 #linkedin {
@@ -424,7 +426,7 @@ footer a {
   header {
     margin-bottom: 50px;
   }
-  
+
   #resumeLinks {
     flex-direction: row;
   }
@@ -513,10 +515,6 @@ footer a {
     margin: 0 auto;
   }
 
-  .createdWith li:hover {
-    background-color: #333c49;
-  }
-
   .projectLinks {
     grid-column-start: 2;
     grid-row-start: 3;
@@ -545,7 +543,6 @@ footer a {
   }
 
   #aboutMe h2 {
-    width: max-content;
     margin-bottom: 20px;
   }
 }
