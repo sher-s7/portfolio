@@ -438,7 +438,7 @@ footer a {
   }
 }
 
-@media (min-width: 768px) and (min-height: 500px) {
+@media (min-width: 1080px) and (min-height: 500px) {
   header {
     flex-direction: row;
     justify-content: space-between;
