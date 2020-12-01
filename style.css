@@ -192,6 +192,14 @@ header {
   text-align: justify;
 }
 
+b.node {
+  color: #46c944;
+}
+
+b.mongo {
+  color: #1fa57d;
+}
+
 b.react {
   color: #61dafb;
 }
@@ -218,18 +226,6 @@ b.npm a {
 
 b.aftereffects {
   color: #ccbaff;
-}
-
-#project-reddit {
-}
-
-#project-weather {
-}
-
-#project-todolist {
-}
-
-#project-teatime {
 }
 
 #aboutMe,
