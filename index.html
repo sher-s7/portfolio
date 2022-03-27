@@ -1,290 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Sher Sheikh - Web Developer - Creating responsive websites from scratch"
-    />
-    <meta
-      name="keywords"
-      content="sher sheikh, portfolio, web development, developer, front end, frontend developer, odin project, breddit, sher-s7"
-    />
-    <meta name="author" content="Sher Sheikh" />
-    <meta property="og:title" content="Sher Sheikh - Portfolio" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/sher-s7/portfolio/master/assets/sher-sheikh.png" />
-    <link rel="icon" type="image/png" href="favicon-32x32.png?v=0" />
-    <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Sher Sheikh - Portfolio</title>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XH5PHKL7WC"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sher Sheikh - Web Developer - Creating responsive websites from scratch" />
+  <meta name="keywords"
+    content="sher sheikh, portfolio, web development, developer, front end, frontend developer, odin project, breddit, sher-s7" />
+  <meta name="author" content="Sher Sheikh" />
+  <meta property="og:title" content="Sher Sheikh - Portfolio" />
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/sher-s7/portfolio/master/assets/sher-sheikh.png" />
+  <link rel="icon" type="image/png" href="favicon-32x32.png?v=0" />
+  <link rel="stylesheet" href="normalize.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./puzzle/style.css" />
+  <title>Sher Sheikh - Portfolio</title>
 
-      gtag('config', 'G-XH5PHKL7WC');
-    </script>
-  </head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XH5PHKL7WC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  <body>
-    <div id="root">
-      <a class="hidden" href="#header" id="scrollToTop"
-        ><img src="assets/up-arrow.png" alt="up-arrow.png"
-      /></a>
-      <header id="header">
-        <div class="headerSection" id="nameTitle">
-          <h1 id="fullname">sher sheikh</h1>
-          <h2 id="title">web developer</h2>
-        </div>
-        <div class="headerSection" id="navLinks">
-          <ul>
-            <li id="projectsLink"><a href="#project-partplanner">projects</a></li>
-            <li id="aboutmeLink"><a href="#aboutMe">about</a></li>
-            <li id="contactmeLink"><a href="#contactMe">contact</a></li>
-            <li id="resumeLink"><a href="#resume">resume</a></li>
-            <li id="githubLink">
-              <a
-                href="https://github.com/sher-s7"
-                target="_blank"
-                rel="noreferrer noopener"
-                >github</a
-              >
-            </li>
-          </ul>
-        </div>
-      </header>
+    gtag('config', 'G-XH5PHKL7WC');
+  </script>
+</head>
 
-      <section class="projectSection" id="project-partplanner">
-        <a
-          class="prevContainer"
-          href="https://pcpartplanner.herokuapp.com/list"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <img
-            class="projectPreview"
-            src="assets/partplanner.png"
-            alt="partplanner.png"
-        /></a>
-        <ul class="createdWith">
-          <li>Node.js</li>
-          <li>Express</li>
-          <li>MongoDB</li>
-          <li>Cookies</li>
-          <li>JavaScript</li>
-          <li>HTML</li>
-          <li>EJS</li>
-          <li>CSS</li>
-          <li>Flexbox</li>
-          <li>CSS Grid</li>
-          <li>npm</li>
-          <li>Responsive</li>
+<body>
+  <div id="root">
+    <a class="hidden" href="#header" id="scrollToTop"><img src="assets/up-arrow.png" alt="up-arrow.png" /></a>
+    <header id="header">
+      <div class="headerSection" id="nameTitle">
+        <h1 id="fullname">sher sheikh</h1>
+        <h2 id="title">web developer</h2>
+      </div>
+      <div class="headerSection" id="navLinks">
+        <ul>
+          <li id="projectsLink"><a href="#project-partplanner">projects</a></li>
+          <li id="aboutmeLink"><a href="#aboutMe">about</a></li>
+          <li id="contactmeLink"><a href="#contactMe">contact</a></li>
+          <li id="resumeLink"><a href="#resume">resume</a></li>
+          <li id="githubLink">
+            <a href="https://github.com/sher-s7" target="_blank" rel="noreferrer noopener">github</a>
+          </li>
         </ul>
-        <div class="description">
-          <p>
-            Created using <b class="node">Node.js</b>, <b>Express</b>, and
-            <b class="mongo">MongoDB</b>. As the name implies, PC Part Planner allows users to plan out parts for a
-            potential PC build. Cookies are used to save user selections, and an option is provided to export the build
-            to a CSV file. All C.R.U.D actions can be performed on the parts, categories, and manufactuers 
-            (Create, Read, Update, Delete).
+      </div>
+    </header>
 
-          </p>
-          <p>
-            Since this was my first time using Node.js, MongoDB, and cookies I learned a lot. There was quite
-            a bit of repetition, which helped solidify my knowledge of C.R.U.D applications.
-          </p>
-        </div>
-        <div class="projectLinks">
-          <a
-            href="https://github.com/sher-s7/express-pc-part-planner"
-            target="_blank"
-            rel="noreferrer noopener"
-            class="sourceCode"
-            >SOURCE CODE</a
-          >
-          <a
-            href="https://pcpartplanner.herokuapp.com/list"
-            target="_blank"
-            rel="noreferrer noopener"
-            class="liveDemo"
-            >VIEW SITE</a
-          >
-        </div>
-      </section>
+    <section class="projectSection" id="project-partplanner">
+      <a class="prevContainer" href="https://pcpartplanner.herokuapp.com/list" target="_blank"
+        rel="noreferrer noopener">
+        <img class="projectPreview" src="assets/partplanner.png" alt="partplanner.png" /></a>
+      <ul class="createdWith">
+        <li>Node.js</li>
+        <li>Express</li>
+        <li>MongoDB</li>
+        <li>Cookies</li>
+        <li>JavaScript</li>
+        <li>HTML</li>
+        <li>EJS</li>
+        <li>CSS</li>
+        <li>Flexbox</li>
+        <li>CSS Grid</li>
+        <li>npm</li>
+        <li>Responsive</li>
+      </ul>
+      <div class="description">
+        <p>
+          Created using <b class="node">Node.js</b>, <b>Express</b>, and
+          <b class="mongo">MongoDB</b>. As the name implies, PC Part Planner allows users to plan out parts for a
+          potential PC build. Cookies are used to save user selections, and an option is provided to export the build
+          to a CSV file. All C.R.U.D actions can be performed on the parts, categories, and manufactuers
+          (Create, Read, Update, Delete).
 
-      <section class="projectSection" id="project-reddit">
-        <a
-          class="prevContainer"
-          href="https://reddit-clone-a7ea1.web.app/"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <img
-            class="projectPreview"
-            src="assets/breddit.png"
-            alt="breddit.png"
-        /></a>
-        <ul class="createdWith">
-          <li>React.js</li>
-          <li>React Router</li>
-          <li>Firebase</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Flexbox</li>
-          <li>CSS Grid</li>
-          <li>webpack</li>
-          <li>npm</li>
-          <li>Responsive</li>
-          <li>Dark Mode</li>
-        </ul>
-        <div class="description">
-          <p>
-            Created using <b class="react">React.js</b> and
-            <b class="firebase">Firebase</b>, Breddit is fully responsive and
-            includes core features of Reddit such as user profiles, creating
-            groups (subreddits), text, image, and link posts, separate feeds,
-            upvoting and downvoting of posts and comments, nested replies, user
-            settings, and dark mode. Routing is done with
-            <b class="react">React Router</b>.
-          </p>
-          <p>
-            This was my first time using React Router and Firebase, so it was a
-            big learning experience. The most challenging part of this project
-            was implementing the nested comments. My initial implementation was
-            slow and made multiple requests to Firebase, but I managed to
-            request all the comments at once, sort them in an effective way, and
-            decrease the loading time immensely.
-          </p>
-        </div>
-        <div class="projectLinks">
-          <a
-            href="https://github.com/sher-s7/reddit-clone"
-            target="_blank"
-            rel="noreferrer noopener"
-            class="sourceCode"
-            >SOURCE CODE</a
-          >
-          <a
-            href="https://reddit-clone-a7ea1.web.app/"
-            target="_blank"
-            rel="noreferrer noopener"
-            class="liveDemo"
-            >VIEW SITE</a
-          >
-        </div>
-      </section>
-      <section class="projectSection" id="project-weather">
-        <a
-          class="prevContainer"
-          href="https://sher-s7.github.io/react-weather-app/"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <img
-            class="projectPreview"
-            src="assets/weather.png"
-            alt="weather.png"
-        /></a>
-        <ul class="createdWith">
-          <li>APIs</li>
-          <li>React.js</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Flexbox</li>
-          <li>CSS Grid</li>
-          <li>webpack</li>
-          <li>npm</li>
-          <li>Responsive</li>
-        </ul>
-        <div class="description">
-          <p>
-            WeatherCheck allows users to enter a city name and receive current
-            weather data using the
-            <b class="openWeather">
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://openweathermap.org/api"
-                >OpenWeatherMap</a
-              ></b
-            >
-            API. Optionally, a user may provide their location using the
-            <b class="geolocation">
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API"
-              >
-                Geolocation</a
-              >
-            </b>
-            API by clicking on the location icon next to the input field. All
-            cities with the specified name are displayed, and a temperature unit
-            toggle is available to switch between Celsius and Fahrenheit. City
-            cards are formatted with the help of CSS Grid.
-          </p>
-          <p>
-            One part of this project that had me Googling quite a bit was the Unix time returned by the API for sunrise/sunset times.
-            I wasn't familiar with it before doing this project, and trying to figure out how to convert it to regular time,
-            but also to the correct timezone of the city being displayed, was a tricky task.
+        </p>
+        <p>
+          Since this was my first time using Node.js, MongoDB, and cookies I learned a lot. There was quite
+          a bit of repetition, which helped solidify my knowledge of C.R.U.D applications.
+        </p>
+      </div>
+      <div class="projectLinks">
+        <a href="https://github.com/sher-s7/express-pc-part-planner" target="_blank" rel="noreferrer noopener"
+          class="sourceCode">SOURCE CODE</a>
+        <a href="https://pcpartplanner.herokuapp.com/list" target="_blank" rel="noreferrer noopener"
+          class="liveDemo">VIEW SITE</a>
+      </div>
+    </section>
 
-          </p>
-        </div>
-        <div class="projectLinks">
-          <a
-            href="https://github.com/sher-s7/react-weather-app"
-            target="_blank"
-            rel="noreferrer noopener"
-            class="sourceCode"
-            >SOURCE CODE</a
-          >
-          <a
-            href="https://sher-s7.github.io/react-weather-app/"
-            target="_blank"
-            rel="noreferrer noopener"
-            class="liveDemo"
-            >VIEW SITE</a
-          >
-        </div>
-      </section>
-      <section class="projectSection" id="project-todolist">
-        <a
-          class="prevContainer"
-          href="https://sher-s7.github.io/todo-list/"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <img class="projectPreview" src="assets/todo.png" alt="todo.png"
-        /></a>
-        <ul class="createdWith">
-          <li>JavaScript</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Flexbox</li>
-          <li>date-fns</li>
-          <li>localStorage</li>
-          <li>Responsive</li>
-        </ul>
-        <div class="description">
-          <p>
+    <section class="projectSection" id="project-reddit">
+      <a class="prevContainer" href="https://reddit-clone-a7ea1.web.app/" target="_blank" rel="noreferrer noopener">
+        <img class="projectPreview" src="assets/breddit.png" alt="breddit.png" /></a>
+      <ul class="createdWith">
+        <li>React.js</li>
+        <li>React Router</li>
+        <li>Firebase</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Flexbox</li>
+        <li>CSS Grid</li>
+        <li>webpack</li>
+        <li>npm</li>
+        <li>Responsive</li>
+        <li>Dark Mode</li>
+      </ul>
+      <div class="description">
+        <p>
+          Created using <b class="react">React.js</b> and
+          <b class="firebase">Firebase</b>, Breddit is fully responsive and
+          includes core features of Reddit such as user profiles, creating
+          groups (subreddits), text, image, and link posts, separate feeds,
+          upvoting and downvoting of posts and comments, nested replies, user
+          settings, and dark mode. Routing is done with
+          <b class="react">React Router</b>.
+        </p>
+        <p>
+          This was my first time using React Router and Firebase, so it was a
+          big learning experience. The most challenging part of this project
+          was implementing the nested comments. My initial implementation was
+          slow and made multiple requests to Firebase, but I managed to
+          request all the comments at once, sort them in an effective way, and
+          decrease the loading time immensely.
+        </p>
+      </div>
+      <div class="projectLinks">
+        <a href="https://github.com/sher-s7/reddit-clone" target="_blank" rel="noreferrer noopener"
+          class="sourceCode">SOURCE CODE</a>
+        <a href="https://reddit-clone-a7ea1.web.app/" target="_blank" rel="noreferrer noopener" class="liveDemo">VIEW
+          SITE</a>
+      </div>
+    </section>
+    <section class="projectSection" id="project-weather">
+      <a class="prevContainer" href="https://sher-s7.github.io/react-weather-app/" target="_blank"
+        rel="noreferrer noopener">
+        <img class="projectPreview" src="assets/weather.png" alt="weather.png" /></a>
+      <ul class="createdWith">
+        <li>APIs</li>
+        <li>React.js</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Flexbox</li>
+        <li>CSS Grid</li>
+        <li>webpack</li>
+        <li>npm</li>
+        <li>Responsive</li>
+      </ul>
+      <div class="description">
+        <p>
+          WeatherCheck allows users to enter a city name and receive current
+          weather data using the
+          <b class="openWeather">
+            <a target="_blank" rel="noreferrer noopener" href="https://openweathermap.org/api">OpenWeatherMap</a></b>
+          API. Optionally, a user may provide their location using the
+          <b class="geolocation">
+            <a target="_blank" rel="noreferrer noopener"
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API">
+              Geolocation</a>
+          </b>
+          API by clicking on the location icon next to the input field. All
+          cities with the specified name are displayed, and a temperature unit
+          toggle is available to switch between Celsius and Fahrenheit. City
+          cards are formatted with the help of CSS Grid.
+        </p>
+        <p>
+          One part of this project that had me Googling quite a bit was the Unix time returned by the API for
+          sunrise/sunset times.
+          I wasn't familiar with it before doing this project, and trying to figure out how to convert it to regular
+          time,
+          but also to the correct timezone of the city being displayed, was a tricky task.
+
+        </p>
+      </div>
+      <div class="projectLinks">
+        <a href="https://github.com/sher-s7/react-weather-app" target="_blank" rel="noreferrer noopener"
+          class="sourceCode">SOURCE CODE</a>
+        <a href="https://sher-s7.github.io/react-weather-app/" target="_blank" rel="noreferrer noopener"
+          class="liveDemo">VIEW SITE</a>
+      </div>
+    </section>
+    <section class="projectSection" id="project-todolist">
+      <a class="prevContainer" href="https://sher-s7.github.io/todo-list/" target="_blank" rel="noreferrer noopener">
+        <img class="projectPreview" src="assets/todo.png" alt="todo.png" /></a>
+      <ul class="createdWith">
+        <li>JavaScript</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Flexbox</li>
+        <li>date-fns</li>
+        <li>localStorage</li>
+        <li>Responsive</li>
+      </ul>
+      <div class="description">
+        <p>
           A to-do list created using <b>HTML</b>, <b>CSS</b>, and modular
           <b>JavaScript</b>. Users can create new projects, new tasks within
           those projects, and give each task a title, description, due date, and
           priority level (1-3). Projects and tasks are editable, and tasks can
           be sorted by date created, date due, and priority (in both ascending
           and descending order). The dates are formatted using the
-          <b class="datefns"
-            ><a
-              target="_blank"
-              rel="noreferrer noopener"
-              href="https://date-fns.org/"
-              >date-fns</a
-            ></b
-          >
+          <b class="datefns"><a target="_blank" rel="noreferrer noopener" href="https://date-fns.org/">date-fns</a></b>
           library.
         </p>
         <p>
@@ -294,164 +209,117 @@
           to only happen in Firefox. While expanding and closing, there is a moment where the sidebar goes under
           the sort bar.
         </p>
-        </div>
-        <div class="projectLinks">
-          <a
-            href="https://github.com/sher-s7/todo-list"
-            target="_blank"
-            rel="noreferrer noopener"
-            class="sourceCode"
-            >SOURCE CODE</a
-          >
-          <a
-            href="https://sher-s7.github.io/todo-list/"
-            target="_blank"
-            rel="noreferrer noopener"
-            class="liveDemo"
-            >VIEW SITE</a
-          >
-        </div>
-      </section>
-      <section class="projectSection" id="project-teatime">
-        <a
-          class="prevContainer"
-          href="https://sher-s7.github.io/react-restaurant-page/"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <img
-            class="projectPreview"
-            src="assets/teatime.png"
-            alt="teatime.png"
-        /></a>
-        <ul class="createdWith">
-          <li>React.js</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Flexbox</li>
-          <li>CSS Grid</li>
-          <li>After Effects</li>
-          <li>webpack</li>
-          <li>npm</li>
-          <li>Responsive</li>
-        </ul>
-        <div class="description">
-          Tea Time is a sample restaurant page and creating it was the first
-          time I used <b class="react">React.js</b>. The site is mobile
-          responsive, and features a spinning teacup when hovered over. This was
-          created by rendering a PNG sequence of a spinning 3D model of a teacup
-          in <b class="aftereffects">Adobe After Effects</b>, converting the
-          sequence to a spritesheet, and using the
-          <b class="npm"
-            ><a
-              target="_blank"
-              rel="noreferrer noopener"
-              href="https://www.npmjs.com/package/react-sprite-animator"
-            >
-              react-sprite-animator</a
-            ></b
-          >
-          component to loop through the spritesheet when hovered over on the
-          page ☕
-        </div>
-        <div class="projectLinks">
-          <a
-            href="https://github.com/sher-s7/react-restaurant-page"
-            target="_blank"
-            rel="noreferrer noopener"
-            class="sourceCode"
-            >SOURCE CODE</a
-          >
-          <a
-            href="https://sher-s7.github.io/react-restaurant-page/"
-            target="_blank"
-            rel="noreferrer noopener"
-            class="liveDemo"
-            >VIEW SITE</a
-          >
-        </div>
-      </section>
+      </div>
+      <div class="projectLinks">
+        <a href="https://github.com/sher-s7/todo-list" target="_blank" rel="noreferrer noopener"
+          class="sourceCode">SOURCE CODE</a>
+        <a href="https://sher-s7.github.io/todo-list/" target="_blank" rel="noreferrer noopener" class="liveDemo">VIEW
+          SITE</a>
+      </div>
+    </section>
+    <section class="projectSection" id="project-teatime">
+      <a class="prevContainer" href="https://sher-s7.github.io/react-restaurant-page/" target="_blank"
+        rel="noreferrer noopener">
+        <img class="projectPreview" src="assets/teatime.png" alt="teatime.png" /></a>
+      <ul class="createdWith">
+        <li>React.js</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Flexbox</li>
+        <li>CSS Grid</li>
+        <li>After Effects</li>
+        <li>webpack</li>
+        <li>npm</li>
+        <li>Responsive</li>
+      </ul>
+      <div class="description">
+        Tea Time is a sample restaurant page and creating it was the first
+        time I used <b class="react">React.js</b>. The site is mobile
+        responsive, and features a spinning teacup when hovered over. This was
+        created by rendering a PNG sequence of a spinning 3D model of a teacup
+        in <b class="aftereffects">Adobe After Effects</b>, converting the
+        sequence to a spritesheet, and using the
+        <b class="npm"><a target="_blank" rel="noreferrer noopener"
+            href="https://www.npmjs.com/package/react-sprite-animator">
+            react-sprite-animator</a></b>
+        component to loop through the spritesheet when hovered over on the
+        page ☕
+      </div>
+      <div class="projectLinks">
+        <a href="https://github.com/sher-s7/react-restaurant-page" target="_blank" rel="noreferrer noopener"
+          class="sourceCode">SOURCE CODE</a>
+        <a href="https://sher-s7.github.io/react-restaurant-page/" target="_blank" rel="noreferrer noopener"
+          class="liveDemo">VIEW SITE</a>
+      </div>
+    </section>
 
-      <section id="aboutMe">
-        <div id="aboutContainer">
-          <h2>About me</h2>
-          <p>
-            Hello there, my name is Sher Sheikh. <sub>(pronounced "share")</sub>
-          </p>
-          <p>
-            Designing and creating responsive websites is some of the most
-            fulfilling work I do, and I always look forward to starting a new
-            project. Before getting into web development I enjoyed video
-            editing, and have been doing it since 2014. With my video editing I
-            grew my own
-            <a
-              href="https://www.youtube.com/TobeyintheMCU"
-              target="_blank"
-              rel="noreferrer noopener"
-              ><b>YouTube channel</b></a
-            >
-            to over <b>230,000</b> subscribers in a little over a year. If you
-            like Marvel, check it out. 🕷️
-          </p>
-          <p>
-            When I'm not coding I enjoy boxing, playing video games, and helping
-            people online with their web development problems.
-          </p>
-        </div>
-      </section>
+    <section id="aboutMe">
+      <div id="aboutContainer">
+        <h2>About me</h2>
+        <p>
+          Hello there, my name is Sher Sheikh. <sub>(pronounced "share")</sub>
+        </p>
+        <p>
+          Designing and creating responsive websites is some of the most
+          fulfilling work I do, and I always look forward to starting a new
+          project. Before getting into web development I enjoyed video
+          editing, and have been doing it since 2014. With my video editing I
+          grew my own
+          <a href="https://www.youtube.com/TobeyintheMCU" target="_blank" rel="noreferrer noopener"><b>YouTube
+              channel</b></a>
+          to over <b>230,000</b> subscribers in a little over a year. If you
+          like Marvel, check it out. 🕷️
+        </p>
+        <p>
+          When I'm not coding I enjoy boxing, playing video games, and helping
+          people online with their web development problems.
+        </p>
+      </div>
+    </section>
 
-      <section id="contactMe">
-        <h2>Get in touch</h2>
-        <a
-          id="linkedin"
-          target="_blank"
-          rel="noreferrer noopener"
-          href="https://www.linkedin.com/public-profile/in/sher-sheikh-3a97a8189/?challengeId=AQE1KHOPqo2BKQAAAXRl_lxpzBYAQGAH85MFBqieb38zrc3YxEA-4eoeiIpY4QoCHhIxgp2ARMa6aXT1piVfgAeFQ9sj5V9Fzw&submissionId=903f9875-4c59-3216-dd2f-6a00f51dbd1e"
-        >
-          Linkedin <img src="assets/linkedin.png" alt="linkedin.png" />
+    <section id="contactMe">
+      <h2>Get in touch</h2>
+      <a id="linkedin" target="_blank" rel="noreferrer noopener"
+        href="https://www.linkedin.com/public-profile/in/sher-sheikh-3a97a8189/?challengeId=AQE1KHOPqo2BKQAAAXRl_lxpzBYAQGAH85MFBqieb38zrc3YxEA-4eoeiIpY4QoCHhIxgp2ARMa6aXT1piVfgAeFQ9sj5V9Fzw&submissionId=903f9875-4c59-3216-dd2f-6a00f51dbd1e">
+        Linkedin <img src="assets/linkedin.png" alt="linkedin.png" />
+      </a>
+      <div id="emailContainer">
+        <a id="emailLink" href="mailto:sher.sheikh77@gmail.com" target="_blank" rel="noreferrer noopener">
+          <input id="email" value="sher.sheikh77@gmail.com" readonly />
+          <img src="assets/email.png" alt="email.png" />
         </a>
-        <div id="emailContainer">
-          <a
-            id="emailLink"
-            href="mailto:sher.sheikh77@gmail.com"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <input id="email" value="sher.sheikh77@gmail.com" readonly />
-            <img src="assets/email.png" alt="email.png" />
-          </a>
-          <button id="copyBtn">COPY</button>
-        </div>
-        <div class="hidden" id="copySuccess">Email copied to clipboard</div>
-      </section>
+        <button id="copyBtn">COPY</button>
+      </div>
+      <div class="hidden" id="copySuccess">Email copied to clipboard</div>
+    </section>
 
-      <div id="resume">
-        <h2>Resume</h2>
-        <div id="resumeLinks">
-          <a
-            href="https://drive.google.com/file/d/1oUjeYEGc-4FOEKF7Vn2Tkw8PysAjPlxf/view?usp=sharing"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            View online
-            <img src="assets/external-link.png" alt="external-link.png"
-          /></a>
-          <a href="downloads/2022 Sher Sheikh - Web Development Resume.pdf" download>
-            Download PDF <img src="assets/download.png" alt="download.png"
-          /></a>
-        </div>
+    <div id="resume">
+      <h2>Resume</h2>
+      <div id="resumeLinks">
+        <a href="https://drive.google.com/file/d/1oUjeYEGc-4FOEKF7Vn2Tkw8PysAjPlxf/view?usp=sharing" target="_blank"
+          rel="noreferrer noopener">
+          View online
+          <img src="assets/external-link.png" alt="external-link.png" /></a>
+        <a href="downloads/2022 Sher Sheikh - Web Development Resume.pdf" download>
+          Download PDF <img src="assets/download.png" alt="download.png" /></a>
       </div>
     </div>
-    <footer>
-      <a
-        href="https://github.com/sher-s7"
-        target="_blank"
-        rel="noreferrer noopener"
-        >Sher Sheikh <img src="assets/github.png" alt="github"
-      /></a>
-    </footer>
 
-    <script src="smoothscroll.min.js"></script>
-    <script type="text/javascript" src="main.js"></script>
-  </body>
+    <section id="puzzleSection">
+      <div class="container">
+        <div class="puzzle"></div>
+      </div>
+      <button id="shuffle" style="margin-top: 30px"><img src="./assets/shuffle.svg" alt="Shuffle"></button>
+    </section>
+  </div>
+  <footer>
+    <a href="https://github.com/sher-s7" target="_blank" rel="noreferrer noopener">Sher Sheikh <img
+        src="assets/github.png" alt="github" /></a>
+  </footer>
+
+  <script src="smoothscroll.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="./puzzle/script.js"></script>
+</body>
+
 </html>
