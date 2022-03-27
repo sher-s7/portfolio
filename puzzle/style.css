@@ -1,0 +1,108 @@
+#puzzleSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0 100px;
+}
+
+.container {
+  width: 95%;
+  max-width: 400px;
+}
+.puzzle {
+  position: relative;
+  border-radius: 10px;
+  background-color: transparent;
+  overflow: hidden;
+  padding-bottom: 100%;
+  transition: transform 0.25s ease;
+}
+
+.square {
+  border: 5px solid transparent;
+  background-color: transparent;
+  position: absolute;
+  width: 25%;
+  padding: 0;
+  transition: 0.25s ease;
+  cursor: pointer;
+}
+
+.square .content {
+  border-radius: 5px;
+  padding-bottom: 100%;
+  background-color: var(--bg2);
+}
+
+.empty {
+  opacity: 0;
+}
+
+.square .content .number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  font-family: "Varela Round";
+  transition: opacity 0.25s ease 0.5s;
+  color: var(--fontColor);
+}
+
+.puzzle.complete {
+  transform: scale(0.9);
+  transition: transform 0.25s ease 2.5s;
+  pointer-events: none;
+}
+
+.puzzle::after {
+  content: "";
+  background: url(../assets/feather-smile.svg);
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.puzzle.complete::after {
+  opacity: 1;
+  transition: opacity 0.25s ease 2.5s;
+}
+
+.puzzle.complete .square {
+  transform: scale(1.2);
+  transition: 0.25s ease, transform 0.25s ease 2.5s, opacity 0.25s ease 1.5s;
+}
+
+.puzzle.complete .content {
+  border-radius: 0;
+  transition: border-radius 0.25s ease 2.5s;
+}
+
+.puzzle.complete .empty {
+  opacity: 1;
+}
+
+.puzzle.complete .number {
+  opacity: 0;
+}
+
+#shuffle {
+  background-color: var(--bg2);
+  padding: 0;
+  cursor: pointer;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+}
