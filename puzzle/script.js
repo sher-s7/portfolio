@@ -30,10 +30,12 @@ for (let i = 0; i < GRID_SIZE; i++) {
 }
 
 function handleClick(e, isScrambling = false) {
-  gtag("event", "click", {
-    event_category: "Puzzle",
-    event_label: "Piece Moved",
-  });
+  if (!isScrambling) {
+    gtag("event", "click", {
+      event_category: "Puzzle",
+      event_label: "Piece Moved",
+    });
+  }
   const { currentTarget } = e;
   const emptyCell = document.querySelector(".empty");
   const [row, column] = currentTarget.dataset.cell.split("-");
