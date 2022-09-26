@@ -1,2 +1,3 @@
 # Web Development Portfolio
-### View my portfolio and resume here: https://shers.dev/
+## https://sher-s7.github.io/portfolio/
+### View my updated portfolio and resume here: https://shers.dev/
